@@ -1,15 +1,11 @@
-<h1>Listing posts</h1>
- 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
- 
+<h1>The Blog!</h1>
+<div class="container"> 
+  <div class="row">
+    <div class="col-md-1">
   <% @posts.each do |post| %>
-    <tr>
-      <td><%= post.title %></td>
-      <td><%= post.body %></td>
-    </tr>
+      <h2><%= post.title %></h2>
+      <P><%= post.body %></p>
   <% end %>
-</table>
+    </div>
+  </div>
+</div>

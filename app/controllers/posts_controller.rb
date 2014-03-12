@@ -5,10 +5,15 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     #flash [:notice] = "Boom goes the Dynamite1"
-    @post.save
-    redirect_to @post
+    
+    if @post.save
+      flash[:notice] = "Boom goes the Dynamite1"
+      redirect_to @post
+    else
+      render 'new'
   end
-
+end
+  
   def show
     @post = Post.find(params[:id])
   end
