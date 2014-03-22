@@ -10,13 +10,19 @@
     <% end %>
     </div>
     <% end %>
-    <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </p>
-  <p><%= f.submit %></p>
+    <div class="col-md-9">
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label for="name"><%= f.label :title %></label>
+          <%= f.text_field :title, label: false, :input_html => { :type => "text", :class => "form-control", :placeholder => "Text input" } %>
+        </div>
+        <div class="form-group">
+          <label for="name"><%= f.label :body %></label>
+          <%= f.text_area :body, :input_html => { :class => "form-control", :rows => "10" } %>
+        </div>
+         <%= f.submit %>
 <% end %>
+      </form>
+    </div>
+
+ 

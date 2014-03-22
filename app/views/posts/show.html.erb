@@ -1,12 +1,13 @@
-<h1>Show post</h1>
-
-<p>
-  <strong><%= @post.title %> </strong>
-</p>
- 
-<p>
-  <%= @post.body %>
-</p>
+<div class="row">
+  <div class="col-md-9">
+    <h1><%= @post.title %> </h1>
+  
+    <div class="well well-lg">
+    <%= simple_format @post.body %>
+    </div>
+  </div>
+</div>
+  
 
 <!-- All Code for Comments -->
 
