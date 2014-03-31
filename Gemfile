@@ -19,6 +19,12 @@ group :development, :test do
   gem 'figaro', '~> 0.7.0'     # env variables
 end
 
+# production gems for heroku
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 # Paging
 gem 'kaminari', '~> 0.15.0'
 
