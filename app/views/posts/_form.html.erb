@@ -18,7 +18,8 @@
         </div>
         <div class="form-group">
           <label for="name"><%= f.label :body %></label>
-          <%= f.text_area :body, :input_html => { :class => "form-control", :rows => "10" } %>
+          <%= f.text_area :body, :class => "tinymce", :rows => 40, :cols => 120 %>
+          <%= tinymce %>
         </div>
          <%= f.submit %>
 <% end %>

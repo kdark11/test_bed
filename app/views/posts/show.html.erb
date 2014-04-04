@@ -3,7 +3,7 @@
     <h1><%= @post.title %> </h1>
   
     <div class="well well-lg">
-    <%= simple_format @post.body %>
+    <%= @post.body.html_safe %>
     </div>
   </div>
 </div>
