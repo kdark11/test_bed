@@ -32,7 +32,7 @@ end
   def update
     @post = Post.friendly.find(params[:id])
  
-    if @post.update(params[:post].permit(:title, :body))
+    if @post.update(params[:post].permit(:title, :published, :body))
       redirect_to @post
     else
       render 'edit'
@@ -52,6 +52,6 @@ private
     # permit list between create and update. Also, you can specialize
     # this method with per-user checking of permissible attributes.
   def post_params
-   params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :published, :body)
   end
 end

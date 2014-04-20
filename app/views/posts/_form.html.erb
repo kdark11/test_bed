@@ -16,6 +16,10 @@
           <label for="name"><%= f.label :title %></label>
           <%= f.text_field :title, label: false, :input_html => { :type => "text", :class => "form-control", :placeholder => "Text input" } %>
         </div>
+        <div>
+          <label for="published"><%= f.label :published %></label>
+          <%= f.date_select :published %>
+        </div>
         <div class="form-group">
           <label for="name"><%= f.label :body %></label>
           <%= f.text_area :body, :input_html => { :class => "form-control", :rows => "10" } %>

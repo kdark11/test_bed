@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140317044151) do
+ActiveRecord::Schema.define(version: 20140419055224) do
 
   create_table "comments", force: true do |t|
     t.string   "commenter"
@@ -36,14 +36,7 @@ ActiveRecord::Schema.define(version: 20140317044151) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
-  create_table "posts", force: true do |t|
-    t.string   "title"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "slug"
-  end
-
-  add_index "posts", ["slug"], name: "index_posts_on_slug", unique: true
+# Could not dump table "posts" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
 end

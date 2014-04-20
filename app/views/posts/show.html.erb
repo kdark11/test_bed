@@ -1,7 +1,8 @@
 <div class="row">
   <div class="col-md-9">
     <h1><%= @post.title %> </h1>
-  
+    <p><%= @post.published %></p>
+    <div><%= @post.author %></div>
     <div class="well well-lg">
     <%= simple_format @post.body %>
     </div>

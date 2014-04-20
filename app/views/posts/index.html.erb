@@ -4,6 +4,7 @@
     <div class="col-md-1">
   <% @posts.each do |post| %>
       <h2><%= link_to post.title, post_path(post.slug) %></h2>
+     
       <P><%= truncate (post.body), :length => 250 %></p>
   <% end %>
     </div>
